@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
-import { supabase } from '@/src/initSupabase';
+import { supabase } from '@/utils/supabase';
 
 const LoginScreen = () => {
     // const handleLogin = async () => {
