@@ -3477,6 +3477,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-inline-dotenv@npm:^1.7.0":
+  version: 1.7.0
+  resolution: "babel-plugin-inline-dotenv@npm:1.7.0"
+  dependencies:
+    dotenv: ^16.0.0
+  peerDependencies:
+    dotenv-expand: ">= 5.0.0"
+  peerDependenciesMeta:
+    dotenv-expand:
+      optional: true
+  checksum: 1203b100b84d247a0db5d1f2565f452e1afa3f747e5ad872ddbf3533b49ec2173ba2c99d22c05fa902914da8de331fbc714132c2eda7b0a2a26fa909dbb10a67
+  languageName: node
+  linkType: hard
+
 "babel-plugin-istanbul@npm:^6.1.1":
   version: 6.1.1
   resolution: "babel-plugin-istanbul@npm:6.1.1"
@@ -4684,7 +4698,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.4.4, dotenv@npm:~16.4.5":
+"dotenv@npm:^16.0.0, dotenv@npm:^16.4.4, dotenv@npm:~16.4.5":
   version: 16.4.5
   resolution: "dotenv@npm:16.4.5"
   checksum: 301a12c3d44fd49888b74eb9ccf9f07a1f5df43f489e7fcb89647a2edcd84c42d6bc349dc8df099cd18f07c35c7b04685c1a4f3e6a6a9e6b30f8d48c15b7f49c
@@ -7791,6 +7805,7 @@ __metadata:
     "@types/react": ~18.2.45
     "@types/react-native": ^0.73.0
     "@types/react-test-renderer": ^18.0.7
+    babel-plugin-inline-dotenv: ^1.7.0
     expo: ~51.0.22
     expo-constants: ~16.0.2
     expo-dev-client: ~4.0.20
