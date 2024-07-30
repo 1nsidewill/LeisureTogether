@@ -1,50 +1,58 @@
-import React from "react";
-import { Text, View, Button, StyleSheet } from "react-native";
-import { HelloWave } from "@/src/components/HelloWave";
+import React from 'react';
+import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
+import { supabase } from '@/src/initSupabase';
 
-export default function Index() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerText}>Voice Chat Room</Text>
-      </View>
-      <View style={styles.userList}>
-        <Text>User 1</Text>
-        <Text>User 2</Text>
-        <Text>User 3</Text>
-        {/* List more users dynamically here */}
-      </View>
-      <HelloWave />
-      <View style={styles.controls}>
-        <Button title="Mute" onPress={() => console.log("Mute/Unmute")} />
-        <Button title="Leave" onPress={() => console.log("Leave Chat")} />
-        {/* Additional control buttons can be added here */}
-      </View>
-    </View>
-  );
-}
+const LoginScreen = () => {
+    // const handleLogin = async () => {
+    //     const { user, session, error } = await supabase.auth.signIn({
+    //         provider: 'kakao'
+    //     });
+
+    //     if (error) console.error('Error logging in:', error.message);
+    //     else console.log('Success! User:', user, 'Session:', session);
+    // };
+
+    return (
+        <View style={styles.container}>
+            <Image
+                style={styles.logo}
+                source={{ uri: 'https://yourapp.com/logo.png' }} // Your app logo URL
+            />
+            <Text style={styles.title}>Welcome to LeisureTogether</Text>
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>Login with Kakao</Text>
+            </TouchableOpacity>
+        </View>
+    );
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-  },
-  header: {
-    padding: 10,
-    backgroundColor: "#6200ee",
-  },
-  headerText: {
-    color: "white",
-    fontSize: 20,
-  },
-  userList: {
-    flex: 1,
-    alignItems: "flex-start",
-    marginTop: 20,
-    marginBottom: 20,
-  },
-  controls: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-  },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff'
+    },
+    logo: {
+        width: 120,
+        height: 120,
+        marginBottom: 20
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 20
+    },
+    button: {
+        backgroundColor: '#FEE500',
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        borderRadius: 5
+    },
+    buttonText: {
+        color: '#000',
+        fontSize: 16
+    }
 });
+
+export default LoginScreen;
